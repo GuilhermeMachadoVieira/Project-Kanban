@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Team Rabitez</title>
+    <link rel="stylesheet" href="<%= 'css/createProject.css' %>">
+    <link rel="shortcut icon" href="<%= 'images/lotus.png' %>" type="image/x-icon">
+</head>
+<body>
+    <div class="container">
+        <div class="left-side">
+            <div class="header">
+                <img src="<%= 'images/lotus.png' %>" alt="Logo" class="logo">
+                <h1>Rabitez</h1>
+            </div>
+        </div>
+        <div class="right-side">
+            <div class="login-container">
+                <h2>Create a New Project</h2>
+                <form action="/createProject" method="POST">
+                    <label for="projectName">Project Name</label>
+                    <input type="text" id="projectName" name="projectName" required>
+                    
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" name="teamName" required>
+                    
+                    <button type="submit">Create</button>
+                </form>                
+                <p>Already have a team? <a href="joinProject">Join</a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

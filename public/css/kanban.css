@@ -1,0 +1,133 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-image: linear-gradient(135deg, rgba(159, 159, 159, 0.46) 0%, rgba(159, 159, 159, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 100.002%), linear-gradient(45deg, rgb(252, 252, 252) 0%, rgb(252, 252, 252) 14.286%, rgb(246, 246, 246) 14.286%, rgb(246, 246, 246) 28.572%, rgb(241, 241, 241) 28.572%, rgb(241, 241, 241) 42.858%, rgb(235, 235, 235) 42.858%, rgb(235, 235, 235) 57.144%, rgb(229, 229, 229) 57.144%, rgb(229, 229, 229) 71.43%, rgb(224, 224, 224) 71.43%, rgb(224, 224, 224) 85.716%, rgb(218, 218, 218) 85.716%, rgb(218, 218, 218) 100.002%);
+}
+
+.scrum-board-container {
+  font-family: Arial;
+  color: #555;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.board-title {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  background-color: #f8f9fa;
+}
+
+.scrum-board {
+  flex: 1;
+  padding: 20px;
+  border-right: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.scrum-board:last-child {
+  border-right: none;
+}
+
+.scrum-board h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.scrum-board-column {
+  min-height: 300px;
+  padding: 10px;
+  border: 1px dashed #ddd;
+  border-radius: 8px;
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+.scrum-board-column.drag-over {
+  background-color: #e2e6ea;
+  border: 2px dashed #007bff;
+}
+
+.scrum-task {
+  position: relative;
+  display: block;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-left: 5px solid #007bff;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: #fff;
+  cursor: all-scroll;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.scrum-task.over {
+  border-top: 2px solid red;
+}
+
+.scrum-task:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.scrum-task>span {
+  color: #333;
+  font-weight: bold;
+}
+
+.scrum-task-description:not(:empty) {
+  margin-top: 10px;
+}
+
+.scrum-task-date:not(:empty) {
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.scrum-task-assignee:not(:empty) {
+  text-align: right;
+}
+
+.scrum-task-assignee>.assignee:not(:empty) {
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  height: 28px;
+  line-height: 28px;
+  width: 28px;
+  background-color: #dfe3e6;
+  border-radius: 25em;
+  color: #17394d;
+  display: inline-block;
+}

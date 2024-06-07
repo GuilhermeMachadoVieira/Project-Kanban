@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kanban Rabitez</title>
+  <link rel="stylesheet" href="<%= 'css/kanban.css' %>">
+  <link rel="shortcut icon" href="<%= 'images/lotus.png' %>" type="image/x-icon">
+</head>
+<body>
+  <div class="scrum-board-container">
+    <div class="board-title">
+      <h1>Kanban Rabitez</h1> 
+      <div id="team-info">
+        <h2 id="team-name">Team Name: </h2>
+        <h3 id="team-id">Team ID: </h3>
+      </div>
+    </div>
+    <div class="flex">
+      <div class="scrum-board backlog">
+        <h2>Backlog</h2>
+        <button onclick="addTask()">Adicionar Tarefa</button>
+        <div class="scrum-board-column" ondrop="drop(event)" ondragover="dragover(event)" ondragleave="dragLeave(event)" id="backlog">
+        </div>
+      </div>
+      <div class="scrum-board in-progress">
+        <h2>In progress</h2>
+        <div class="scrum-board-column" ondrop="drop(event)" ondragover="dragover(event)" ondragleave="dragLeave(event)" id="in-progress">
+        </div>
+      </div>
+      <div class="scrum-board done">
+        <h2>Done</h2>
+        <div class="scrum-board-column" ondrop="drop(event)" ondragover="dragover(event)" ondragleave="dragLeave(event)" id="done">
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const urlParams = new URLSearchParams(window.location.search);
+      const projectId = urlParams.get('projectId');
+      const projectName = urlParams.get('projectName');
+
+      document.getElementById('team-id').textContent = `Team ID: ${projectId}`;
+      document.getElementById('team-name').textContent = `Project Name: ${projectName}`;
+    });
+  </script>
+  <script src="/js/kanban.js"></script>
+</body>
+</html>
+

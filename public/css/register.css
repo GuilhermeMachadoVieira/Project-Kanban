@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-image: linear-gradient(135deg, rgba(159, 159, 159, 0.46) 0%, rgba(159, 159, 159, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 14.286%, rgba(165, 165, 165, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 28.572%, rgba(171, 171, 171, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 42.858%, rgba(178, 178, 178, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 57.144%, rgba(184, 184, 184, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 71.43%, rgba(190, 190, 190, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 85.716%, rgba(196, 196, 196, 0.46) 100.002%), linear-gradient(45deg, rgb(252, 252, 252) 0%, rgb(252, 252, 252) 14.286%, rgb(246, 246, 246) 14.286%, rgb(246, 246, 246) 28.572%, rgb(241, 241, 241) 28.572%, rgb(241, 241, 241) 42.858%, rgb(235, 235, 235) 42.858%, rgb(235, 235, 235) 57.144%, rgb(229, 229, 229) 57.144%, rgb(229, 229, 229) 71.43%, rgb(224, 224, 224) 71.43%, rgb(224, 224, 224) 85.716%, rgb(218, 218, 218) 85.716%, rgb(218, 218, 218) 100.002%);
+}
+
+.container {
+    display: flex;
+}
+
+.left-side {
+    flex: 1;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.header h1 {
+    color: white;
+    font-size: 3em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin-left: 10px;
+}
+
+.header .logo {
+    width: 50px;
+    height: auto;
+}
+
+.right-side {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.login-container {
+    width: 80%;
+    max-width: 400px;
+    padding: 0px 20px;
+    height: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+.login-container input {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.login-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0a993a;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.login-container button:hover {
+    background-color: #096427;
+}
+
+.login-container p {
+    margin-top: 10px;
+}
+
+.login-container a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}
