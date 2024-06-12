@@ -25,4 +25,25 @@ router.get('/login', userController.showLoginPage);
 
 router.post('/login', userController.loginUser);
 
+router.get('/createProject', isAuthenticated, (req, res) => {
+    res.render('createProject');
+});
+
+router.post('/createProject', isAuthenticated, userController.createProject);
+
+router.get('/kanban', isAuthenticated, (req, res) => {
+    const projectId = req.query.projectId;
+    const projectName = req.query.projectName;
+    const teamName = req.query.teamName;
+    const teamCode = req.query.teamCode;
+    // Lógica para recuperar dados do kanban usando projectId
+    res.render('kanban', { projectId, projectName, teamName, teamCode });
+});
+
+router.get('/joinProject', (req, res) => {
+    res.render('joinProject');
+});
+
+router.post('/joinProject', userController.joinProject);
+
 module.exports = router;

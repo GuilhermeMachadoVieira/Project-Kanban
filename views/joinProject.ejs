@@ -18,17 +18,17 @@
         <div class="right-side">
             <div class="login-container">
                 <h2>Join a team</h2>
-                <form action="/login" method="POST">
-  
-                    <label for="password">Team Name</label>
-                    <input type="password" id="password" name="password" required>
+                <form action="/joinProject" method="POST">
 
-                    <label for="email">Team Code</label>
-                    <input type="email" id="email" name="email" required>
-                                 
+                    <label for="teamName">Team Name</label>
+                    <input type="text" id="teamName" name="teamName" required>
+
+                    <label for="teamCode">Team Code</label>
+                    <input type="text" id="teamCode" name="teamCode" required>
+
                     <button type="submit">Join</button>
                 </form>
-                <p>Don't have a team? <a href="createProject">create a new</a></p>
+                <p>Don't have a team? <a href="/createProject">Create a new</a></p>
             </div>
         </div>
     </div>
